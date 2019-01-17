@@ -16,7 +16,7 @@ namespace SaaramshaApps
 
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
-                routeTemplate: "api/{controller}/{id}",
+                routeTemplate: "app/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
         }
