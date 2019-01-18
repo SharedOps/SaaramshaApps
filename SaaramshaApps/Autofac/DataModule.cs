@@ -17,7 +17,7 @@ namespace SaaramshaApps.Autofac
             builder.RegisterType<DapperService>().As<IDapperService>();
             builder.RegisterType<SaaramshaUserService>().As<ISaaramshaUserService>();
             builder.RegisterType<SaaramshaProjectService>().As<ISaaramshaProjectService>();
-           
+            builder.RegisterType<SaaramshaTaskService>().As<ISaaramshaTaskService>();
         }
     }
 }

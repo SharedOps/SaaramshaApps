@@ -207,17 +207,20 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Controllers\WebApi\SaaramshaProjectController.cs" />
-    <Compile Include="Controllers\WebApi\SaaramshaTasksController.cs" />
+    <Compile Include="Controllers\WebApi\SaaramshaTaskController.cs" />
     <Compile Include="Controllers\WebApi\SaaramshaUserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Interfaces\ISaaramshaProjectService.cs" />
+    <Compile Include="Interfaces\ISaaramshaTaskService.cs" />
     <Compile Include="Interfaces\ISaaramshaUserService.cs" />
     <Compile Include="Models\WebApi\SaaramshaProject.cs" />
+    <Compile Include="Models\WebApi\SaaramshaTask.cs" />
     <Compile Include="Models\WebApi\SaaramshaUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\SaaramshaProjectService.cs" />
+    <Compile Include="Services\SaaramshaTaskService.cs" />
     <Compile Include="Services\SaaramshaUserService.cs" />
   </ItemGroup>
   <ItemGroup>
