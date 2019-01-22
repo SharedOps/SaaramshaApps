@@ -10,6 +10,7 @@ using Autofac;
 using System.Threading.Tasks;
 using SaaramshaApps.Models.WebApi;
 using System.Web.Http.Description;
+using SaaramshaApps.Common;
 
 namespace SaaramshaApps.Controllers.WebApi
 {
@@ -26,9 +27,10 @@ namespace SaaramshaApps.Controllers.WebApi
         [HttpPost]
         [Route("addtask")]
         [ResponseType(typeof(SaaramshaTask))]
-        public async Task<int> AddTask([FromBody] SaaramshaTask task)
+        public async Task<Response> AddTask([FromBody] SaaramshaTask task)
         {
-            return await _iSaaramshaTaskService.AddTask(task);
+            int result= await _iSaaramshaTaskService.AddTask(task);
+            return ResponseUtility.CreateResponse(result);
         }
 
         [HttpGet]

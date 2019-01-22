@@ -30,7 +30,9 @@ namespace SaaramshaApps.Services
                 connection.StoredProcedure = Constants.InsertProjects;
                 DynamicParameters parameters = new DynamicParameters();
                 parameters.Add(Constants.ProjectName_Param, project.ProjectName);
-                    return _iDapperService.Execute(parameters, connection);
+                parameters.Add(Constants.ProjectStartDate_Param, DateTime.Now);
+                parameters.Add(Constants.ProjectEndDate_Param, DateTime.Now);
+                return _iDapperService.Execute(parameters, connection);
             }
             catch (Exception)
             {

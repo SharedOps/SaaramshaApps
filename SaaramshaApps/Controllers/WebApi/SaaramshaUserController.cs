@@ -4,6 +4,7 @@ using SaaramshaApps.Interfaces;
 using System.Threading.Tasks;
 using System.Web.Http.Description;
 using System.Collections.Generic;
+using SaaramshaApps.Common;
 
 namespace SaaramshaApps.Controllers.WebApi
 {
@@ -21,9 +22,10 @@ namespace SaaramshaApps.Controllers.WebApi
         [HttpPost]
         [Route("adduser")]
         [ResponseType(typeof(SaaramshaUser))]
-        public async Task<int> AddUser([FromBody] SaaramshaUser user)
+        public async Task<Response> AddUser([FromBody] SaaramshaUser user)
         {
-            return await _iSaaramshaUserService.AddUser(user);
+            int result= await _iSaaramshaUserService.AddUser(user);
+            return ResponseUtility.CreateResponse(result);
         }
 
         [HttpGet]

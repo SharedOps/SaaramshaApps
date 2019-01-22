@@ -20,6 +20,8 @@
         public const string Email_Param             = "@p_Email";
 
         public const string ProjectName_Param       = "@p_ProjectName";
+        public const string ProjectStartDate_Param  = "@p_StartDate";
+        public const string ProjectEndDate_Param    = "@p_DueDate";
 
         public const string ProjectId_Param         = "@p_ProjectId";
         public const string TaskName_Param          = "@p_TaskName";
