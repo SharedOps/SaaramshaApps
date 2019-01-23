@@ -6,12 +6,15 @@
 
         //Stored Procedures
 
-        public const string InsertUsers     = "sp_Insert_Users";
-        public const string GetUsers        = "sp_Get_Users";
-        public const string GetProjects     = "sp_Get_Projects";
-        public const string InsertProjects  = "sp_Insert_Projects";
-        public const string InsertTasks     = "sp_Insert_Tasks";
-        public const string GetTasks        = "sp_Get_Tasks";
+        public const string InsertUsers         = "sp_Insert_Users";
+        public const string GetUsers            = "sp_Get_Users";
+        public const string GetProjects         = "sp_Get_Projects";
+        public const string InsertProjects      = "sp_Insert_Projects";
+        public const string InsertTasks         = "sp_Insert_Tasks";
+        public const string GetTasks            = "sp_Get_Tasks";
+        public const string InsertNavLink       = "sp_Insert_NavigationLink";
+        public const string GetNavLinks         = "sp_Get_NavigationLinks";
+        public const string GetNavLinksByStatus = "sp_Get_NavigationLinksByStatus";
 
         //Sql User Parameters
 
@@ -28,6 +31,10 @@
         public const string TaskDescription_Param   = "@p_TaskDescription";
         public const string AssignedTo_Param        = "@p_AssignedTo";
         public const string TaskStatusId_Param      = "@p_TaskStatusId";
+
+        public const string NavTitle                = "@p_Title";
+        public const string NavLink                 = "@p_Link";
+        public const string NavIsActive             = "@p_IsActive";
         
     }
 }

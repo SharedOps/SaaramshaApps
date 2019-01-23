@@ -18,6 +18,7 @@ namespace SaaramshaApps.Autofac
             builder.RegisterType<SaaramshaUserService>().As<ISaaramshaUserService>();
             builder.RegisterType<SaaramshaProjectService>().As<ISaaramshaProjectService>();
             builder.RegisterType<SaaramshaTaskService>().As<ISaaramshaTaskService>();
+            builder.RegisterType<SaaramshaNavigationService>().As<ISaaramshaNavigation>();
         }
     }
 }
