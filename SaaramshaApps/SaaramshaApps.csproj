@@ -213,7 +213,6 @@
     <Compile Include="Common\Response.cs" />
     <Compile Include="Common\ResponseUtility.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Controllers\WebApi\SaaramshaNavigationController.cs" />
     <Compile Include="Controllers\WebApi\SaaramshaProjectController.cs" />
     <Compile Include="Controllers\WebApi\SaaramshaTaskController.cs" />

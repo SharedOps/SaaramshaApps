@@ -4,6 +4,7 @@ using SaaramshaApps.Interfaces;
 using System.Threading.Tasks;
 using System.Web.Http.Description;
 using System.Collections.Generic;
+using SaaramshaApps.Common;
 
 namespace SaaramshaApps.Controllers.WebApi
 {
@@ -20,17 +21,20 @@ namespace SaaramshaApps.Controllers.WebApi
         [HttpPost]
         [Route("addproject")]
         [ResponseType(typeof(SaaramshaProject))]
-        public async Task<int> AddProject([FromBody] SaaramshaProject project)
+        public async Task<Response> AddProject([FromBody] SaaramshaProject project)
         {
-            return await _iSaaramashaProjectService.AddProject(project);
+            int result = await _iSaaramashaProjectService.AddProject(project);
+            return ResponseUtility.CreateResponse(result);
         }
 
         [HttpGet]
         [Route("getprojects")]
         [ResponseType(typeof(SaaramshaProject))]
-        public async Task<IList<SaaramshaProject>> GetProjects()
+        public async Task<Response> GetProjects()
         {
-            return await _iSaaramashaProjectService.GetProjects();
+            IList<SaaramshaProject> result = await _iSaaramashaProjectService.GetProjects();
+            return ResponseUtility.CreateResponse(result);
+  ;
         }
     }
 }

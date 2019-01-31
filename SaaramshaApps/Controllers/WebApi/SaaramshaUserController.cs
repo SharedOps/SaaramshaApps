@@ -31,9 +31,11 @@ namespace SaaramshaApps.Controllers.WebApi
         [HttpGet]
         [Route("getusers")]
         [ResponseType(typeof(SaaramshaUser))]
-        public async Task<IList<SaaramshaUser>> GetUsers()
+        public async Task<Response> GetUsers()
         {
-            return await _iSaaramshaUserService.GetUsers();
+            IList<SaaramshaUser> result = await _iSaaramshaUserService.GetUsers();
+            return ResponseUtility.CreateResponse(result);
+    
         }
     }
 }

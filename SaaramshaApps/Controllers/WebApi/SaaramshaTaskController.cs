@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
+﻿using System.Collections.Generic;
 using System.Web.Http;
 using SaaramshaApps.Interfaces;
-using Dapper;
-using Autofac;
 using System.Threading.Tasks;
 using SaaramshaApps.Models.WebApi;
 using System.Web.Http.Description;
@@ -36,9 +30,10 @@ namespace SaaramshaApps.Controllers.WebApi
         [HttpGet]
         [Route("gettasks")]
         [ResponseType(typeof(SaaramshaTask))]
-        public async Task<IList<SaaramshaTask>> GetTasks()
+        public async Task<Response> GetTasks()
         {
-            return await _iSaaramshaTaskService.GetTasks();
+            IList<SaaramshaTask> result = await _iSaaramshaTaskService.GetTasks();
+            return ResponseUtility.CreateResponse(result);
         }
     }
 }
